@@ -1,26 +1,29 @@
 const express = require("express");
-const bodyParser = require("body-parser");
 const cors = require("cors");
 
 const app = express();
 
-//Middleware
-app.use(bodyParser.json());
+// Middleware
+app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
 app.use(cors());
 
-const posts = require('./routes/api/posts');
+// APIs
+const api = require("./routes/api/general");
+app.use("api/general", api);
 
-app.use('/api/posts', posts);
+const posts = require("./routes/api/posts");
+app.use("/api/posts", posts);
 
-// HAndle production
-if(process.env.NODE_ENV === "production"){
-    // Static folder
-    app.use(express.static(__dirname + "/public/"));
+// Handle production
+if (process.env.NODE_ENV === "production") {
+  // Static folder
+  app.use(express.static(__dirname + "/public"));
 
-    // Handle SPA
-    app.get(/.*/, (req,res) => res.sendFile(__dirname + "/public/index.html"));
+  // Handle Single Page Application (SPA)
+  app.get(/.*/, (req, res) => res.sendFile(__dirname + "/public/index.html"));
 }
 
-const port = process.env.PORT || 5000;
+const port = process.env.PORT || 5001;
 
 app.listen(port, () => console.log(`Server started on port ${port}`));

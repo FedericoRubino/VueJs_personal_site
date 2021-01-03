@@ -1,5 +1,20 @@
-# VueJs_personal_site
+# TypeWars
 
-# Application to get a grasp on VueJs and Express
+### By Federico Rubino and Cody Patterson
 
-Currently this app has it's own mongodb database with CRD abilities.
+Notes:
+
+Stack
+
+- MongoDB
+- Express server
+- Angular
+- Node.js
+
+Technologies
+
+- Websockets
+
+## Wireframe
+
+![GitHub Logo](https://github.com/FedericoRubino/TypeWars/blob/master/wireframe_mockup.PNG)
