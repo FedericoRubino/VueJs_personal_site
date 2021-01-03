@@ -34,7 +34,7 @@ async function loadPostsCollection() {
     useUnifiedTopology: true,
   });
 
-  return client.db("type_wars").collection("posts");
+  return client.db("Vue_express_fullstack").collection("posts");
 }
 
 module.exports = router;
