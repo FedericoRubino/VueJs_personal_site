@@ -26,3 +26,4 @@ Technologies
 - run local frontend npm run serve
 - run heroku site heroku open
 - build server site npm run build
+- git push to heroku: git push heroku HEAD:master
