@@ -3,7 +3,7 @@ const mongodb = require("mongodb");
 
 const router = express.Router();
 const dbUrl =
-  "mongodb+srv://cody:n3xtg3n@cluster0.azniz.mongodb.net/type_wars?retryWrites=true&w=majority";
+  "mongodb+srv://abc123:suchagreatpassowrd123123@cluster0.8hrzl.mongodb.net/Vue_express_fullstack?retryWrites=true&w=majority";
 
 // Get Post
 router.get("/", async (req, res) => {
